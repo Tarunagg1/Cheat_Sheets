@@ -186,31 +186,148 @@ Syntax :-
 
 All abouts angular Loops
 ------------------------------------
-1.
+1. *ngFor user for for Loops
+      -we can find index even odd index in Loop
+            --even as e , odd as o, index ad i etc
+       -we can iterate array of an obj or array
+       -we use with array 
+
+Syntax:-
+<div *ngFor="let user of users; index as i; even as e; odd as o;">
+    <p>{{user.id}} </p>
+    <p>{{user.name}} </p>
+    <p>{{o}} </p>
+    <p>{{e}} </p>
+    <p>{{i}} </p>
+</div>
 ------------------------------------ all abouts angular Loop
 
 
 
+All abouts angular Ng Style
+------------------------------------
+1. the ngStyle is a directive let u set a given Dom element style proprties
+2. we can send dynamic value waya variables
+3. u can set one or more then proprties.
+4. we can pass more then one videos in ngStyle
+
+Syntax :-  <div [ngStyle]="background-color":"value","color":"red"></div> 
+
+------------------------------------ all abouts angular Ng Style
+
+
+All abouts angular ngClass
+------------------------------------
+1. ngClass is a directive which allow us to set class name fro the elemrnt
+2. we can pass dynamic value waya variables
+3. [ngClass] is use
+4. we pass <class-name> in single quotes inside double quotes
+
+Syntax :-  <div [ngClass]="'any-class-name'"></div> 
+
+------------------------------------ all abouts angular ngClass
+
+
+All abouts angular Data Binding
+------------------------------------
+1. Binding means bind data from template to controller and vice-versa
+2. define how as the data flow and how data gets or updated based on business logic
+3. Type Of data Binding There 2 type of Binding
+    #- One way data Binding
+      --Pass data component to views
+      --we can get data in view usig {{variable-name}}
+      --One way pass data
+    -Type of One way data Binding
+      ! Component to view
+        --Interpolation -> it is use to sending data controller to and displayng it
+        --proprty Binding -> all the html have proprties we can sent in component to view
+        --style binding -> all the html proprties have style we can set in component to view
+        --attribute binding -> send data
+      ! view to component
+        --Event binding -> with event  click over we can send data view to controller 
+      
+    #- Tow way data Binding
+      -we send data view to controller and again controller to view
+
+------------------------------------ all abouts angular Data Binding
+
+
+
+All abouts angular One Way Data Binding 
+------------------------------------
+1. Iterpolation
+   -use to transmit data controller to view
+   -we can access data using {{ }} expression 
+
+2. property Binding
+   -is a technique that allow us to bind properties of elements from component to views[template]
+   -can be userd fro all proprties like innerHtml,src.
+   -data flow is one way
+   -syntax: [property]="expression", [placeholder]="expression" , [src]="expression"
+
+3. attribute Binding
+    -is a technique that allow us to Crate or bind attribute of elements from component to views[template]
+    -data is flow in one way
+    -u can use any existing property or create custom
+    -syntax :-  [attr.anyname]="{expression}" 
+
+4. Event Binding
+     -is a technique that allow us to bind Events of elements from View to Component
+    -data is flow in one way data flow view to component
+    -Syntax:- <button (any eveny name)="anyfunction()">Click me</button>
+
+------------------------------------ all abouts angular One Way Data Binding 
+
+All abouts angular One Way Data Binding 
+------------------------------------
+1. Two Way Data binding
+    -is a technique that allow us to bind properties of elements from component to views[template] or vice versa
+   -data flows both ways.
+   -two way data binding is a combination of Event binding + property binding
+   -we bind using [ngModel]-square brackets of property binding with parentheses of event binding in single notation
+   -syntax:- <Input [(ngModel)]="data />
+   -mostly used in input controls where we can read data from user input and perform some operation on its
+
+------------------------------------ all abouts angular Two Way Data Binding 
+
+
+
+All abouts angular Pipes
+------------------------------------
+1. pipes are used to transform data 
+2. pipe take an input and converts/transform into desired outpFormatut
+3. pipes are wirtten using pipes operator |
+4. we can apply pipes to any view/template and any data inputs
+5. Types of Pipes
+     -bulit in pipes { Lowercase,Uppercase,Date,Curency,json }
+     -parametrized pipes { We can pass one or more parameter in pipes }
+     -chaining pipes { we connect multipul pipes to data inputs }
+     -custom pipes { we can create our own pipes for various data formating }
+
+------------------------------------ all abouts angular Pipes End
 
 
 
 
+All abouts angular Describe all pipes breif
+------------------------------------
+1. How to use bulit in pipes 
+   syntax:-  {{data | json}}, {{data.firstname | lowercase }} 
 
+2. parameter pipes 
+    syntax:- {{data.dob | date:'short' }} {{data.salery | currency:'Ipass-countrycodeNR':'INR':'3.0-2' }}
 
+3. chaining pipes
+    syntax:-   {{dob | date | Uppercase }}
+     
+4. custom pipes
+    -we can genrate our new custom pipes in our angular application
+    -we can genrate new custom pipe using cmd
+    -command ng genrate pipe any-pipe-name
+    -pipes needed to to be added to the module - thankfully cli does this work when we auto genrate
+    -we need to import the pipes and pipetransform from @angular/core
+    -pipe are declared with the decorators @pipe and provide the selector name
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+------------------------------------ all abouts Describe all pipes breif End
 
 
