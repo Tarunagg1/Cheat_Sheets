@@ -331,3 +331,336 @@ All abouts angular Describe all pipes breif
 ------------------------------------ all abouts Describe all pipes breif End
 
 
+/*-------------------------------------------------------------------------------------------------------------------------------
+All abouts angular Routing Introduction
+------------------------------------
+1. Routing is a machanism used by angular framework to manage the "paths" and "routeS" of our angular application
+2. Routing help us in navigation between various views in out angular Application.
+3. Angular framework comes with Router Mudule which we need to design and develop and implement routes and navigation link
+4. Router are singleton- which mean there only one instance router in our application
+5. Angular router is official router which design and maintain by angular team
+6. The route found in the package @angular/router
+7. we need to setup Router Array- every time a request made the router will search in the list of array and found most relevent search
+8. Router has state which help to get more relevent information.
+9.  we navigate one component view to another
+10. we can config diffrent type route
+     -default router
+     -child route
+     -query params
+     -lazy loading
+     -404 handel
+     -url sagment
+
+11. syntax:
+      import {Routes,RouteModuls} from '@angular/router'
+      const route: Routes = [
+          {path:'',redirectTo:'enroll',pathMatch:'full'},
+          {path:'',redirectTo:'enroll',pathMatch:'full'},
+      ]
+12. Router is singleton - which means there is only one instance of angular router per application
+------------------------------------ all abouts Routing Introduction End
+
+All abouts angular Routing strategies 
+------------------------------------
+1. this is extremely important
+
+2.  /home
+   /dashboard
+   /serch?key=10
+   /product/10
+3. there is no restriction
+------------------------------------ all abouts Routing strategies End
+
+All abouts angular Routing base href 
+------------------------------------
+1. all angular application must have a base href
+2. base href exists in index.html
+3. if base href not exist our application not work
+4. ng build - whan deploying it will allways asume
+    -u are are deploying root folder
+    -"/" root folder
+5. Config base path
+   -ng build --base-href='/anyname'
+------------------------------------ all abouts Routing base href  End
+
+
+All abouts angular Routing module
+------------------------------------
+1. Routing module is a placeholder for config all routes and navigations in one module
+2. best practice is to have all routes config in one place
+3. easy to maintain and dubug
+4. ng genrate module app-routing --flat --module=app
+6. creating Routing syntax:-
+   -import {Routes,RouteModule} from '@angular/router'
+    -   const route: Routes = [
+          {path:'',redirectTo:'enroll',pathMatch:'full'},
+          {path:'',redirectTo:'enroll',pathMatch:'full'},
+      ]
+     - @ngModel({
+          imports:[RouteModule.forRoot(routes)],
+          exports:[RouteModule]
+      })
+      exports class AppRoutingModule { }
+------------------------------------ all abouts Routing module End
+
+
+All abouts angular Routing Query Params
+------------------------------------
+1. twiter.com/search?trending=10
+2. display in the url
+3. get http method calls
+4. donn't send senstivites info 
+------------------------------------ all abouts Routing Query Params End
+
+All abouts angular Routing Redirecting route
+------------------------------------
+1. we can define any number of redirecting route
+2. we have to provide "redirectTo" in our routing module
+3. we also specify pathmatch should to Full
+------------------------------------ all abouts Routing Redirecting route End
+
+
+All abouts angular Routing wildcard route
+------------------------------------
+1. wildcard routes any invalid card in our application
+2. when no matching routes found in route array then route does not know where to go and hence result err in console
+3. whild card are define in the routes array 
+   -{path:'**'}
+4. usuall component name pagenotfound
+------------------------------------ all abouts Routing wildcard route End
+
+All abouts angular Routing child route
+------------------------------------
+1. we can config child routes to create more meningful url segment
+2. the child routes array will follow the same syntax and array concept as similar to defination the the routes Array
+3. syntax:-
+    {path:'product',[
+        children:[
+            {path:'product-child',component:prodctcomponene}
+        ]
+    ]}
+4. we can config any number of child routes to parent route
+5. customers /customer   - parent route
+    view /customer/view     -child route
+        info customer/view/info  --child route of view
+        delete /customer/view/debug
+6. this is not grate way to create we should allways create seprate routes
+------------------------------------ all abouts Routing child route End
+
+
+All abouts angular Routing lazy loading route
+------------------------------------
+1. by default ngModules are early loded which means that as soon as the app loads so do all the ngModule weather or not thet are immediatly loded
+2. every large application is made up multipul module
+3. all the mudule loaded as soon as app is loded
+    -it will load all module which we don't nmeed at that time
+    -it makes application very heavy
+    -it slowdown in performance
+4. lazy loading mean loda module when needed
+    -load module when it required
+
+5. how we do implement lazy loading  it is 2 step config process
+    1. create a feature mudule
+        -child module
+    2. load childmodule
+       -confg in app routing
+6. how to implement lazy loading
+    -ng g m orders --route orders --mudule app.module
+----------------------------------- all abouts Routing lazy loading route End
+
+
+All abouts angular Routing routing guards route
+------------------------------------
+1. use route guard to prevent users from navigating to parts of an app which is authorized
+2. route guard is use to secure the routes path
+3. we can genrate any number or route guard
+4. whenever we implement route guard it return boolean value either [true,false]
+5. ng g gard <gard-name>
+------------------------------------ all abouts Routing routing guards route End
+
+-------------------------------------------------------------------------------- Routing End *\
+
+All abouts angular Form template Driven form 
+------------------------------------
+1. Easy to use
+2. template Driven form are simple and sttaight forword
+3. all the validation form elements are all defind in template file
+4. form are tracked automatically
+5. we need to import FormsModule from '@angular/forms'
+
+---------------------------------- form tage in angular for validation
+6. #singform="ngForm" // for form name
+7. ngModel // in input 
+8. [disabled]="!formname.valid" 
+9. #email="ngModel"        /// templating binding with filed name
+----------------------------------- all abouts  template Driven form End
+
+
+All abouts angular Form Reactive form 
+------------------------------------
+1. all the element user intraction and validation are hadled in the component class
+2. we will make use of angular built in formgroup or formcontrole
+3. use Reactive form we can control better data binding
+4. we will need to to import ReactiveFormModule iin our app module
+5. more logic in the componet class less ion html mark up itself.
+6. we can get or set values in form useing function 
+------------- five simple steps
+- we will need to to import ReactiveFormModule iin our app module
+- create the form in app.component.html or other file
+---------------------------------validation
+- do validation in app we use predefine validator or our custom validator
+- we need to import Validators from @angular/form
+----------------------------------- all abouts Reactive form End
+
+
+All abouts angular Form control and group form 
+------------------------------------
+1. form control
+    -form control is nothing but any field in our from become a form control
+2. form group
+    -form group is more then one form control become a form group
+3. from array
+    - form array is a group of multipul form controle and form group
+    formarray = {
+        formcontrole,
+        formgroup
+    }
+    - if any form control become invalid then entire form array become invalid
+    -* we have multipul type of form array
+        
+----------------------------------- all abouts Form control and group  End
+
+
+All abouts angular observable form 
+------------------------------------
+1. observable is a part of Rxjs library
+2. import observable into our component where we want to make it use
+3. observable is a sequence of data that is emitted over priod of time
+4. this data cab be any time string int etc
+5. angular uses observable very frequently in most of asyn operation
+    -http
+    -routing
+    -event handling
+6. in order to listen and track changes of observable we nee obsever
+7. obsever will continously track the change of observable
+8. obsever have many frequently methhod
+    -next()
+    -error()
+    -complete()
+9. observable is unless or useless without we subscribe
+10. by subscribe we mean that we are processing the data/values sent by observable over period of time
+11. we can have multiple subscribers ot our observable
+12. wecan unsubscribe from an subscribe
+
+hands on example
+1.  shopping cart example
+    -user is place order
+        -initial state of order is in progress
+        -after some time once is recived status should :processing
+        -once order is complete state should be :complete
+
+----------------------------------- all abouts observable End
+
+All abouts angular service form 
+------------------------------------
+1. service is use to for building reusable shared functionality
+2. service are singleton they need to inject into component where we want to use
+3. inline component service not need to include in our module
+4. we can create any number of service 
+5. services are injecting in run time
+6. the code become highly efficient and easy to maintain
+7. we can heve values of object or both
+8. u can relate that service with js class with mathod or variables
+9. import {injectable}  from '@angular/core'
+10. we can genrate service using ng genrate service <service-name>
+11. we cag genrate service anywhere
+    - but best practice is genrate service where its relate to module
+----------------------------------- all abouts service End
+
+
+All abouts angular httpmodule
+------------------------------------
+1. we use httpclient to make request and process response of http calls
+2. we make http calls tp serve and or point of apis
+3. to work with httpclient we need to import httpclientmodule in our app module
+    - without this step our http will not work
+4. we wiil need to import httpclient in our component if we want to make http calls
+5. as a best service we usually make http calls in our services
+6. setup a mock server for our example and app    
+7. import httpclientmodule in application use '@angular/common/http' package
+----------------------------------- all abouts httpmodule End
+
+
+
+All abouts angular httpmodule request
+------------------------------------
+1. get request
+    - make sure u have endpoint or api or url which return u a response data
+    - import httpclientmodule in app module
+        -- if u don't do that it will throw error
+    - it wall allways return observable.
+2. post method
+    - in post we need to pass body in endpoint or api
+
+3. put method
+
+4. delete methhod
+
+5. httpclient module
+    - http header in the class of httpheader
+    - we need to import class httpheaders
+    - it is immutable we can't modify it
+    - we can pass httpheader with get post put delete request
+    - dont pass duplicate headers 
+    
+6. params 
+----------------------------------- all abouts httpmodule request End
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
