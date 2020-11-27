@@ -578,7 +578,7 @@ All abouts angular service form
 ----------------------------------- all abouts service End
 
 
-All abouts angular httpmodule
+All abouts angular httpclient
 ------------------------------------
 1. we use httpclient to make request and process response of http calls
 2. we make http calls tp serve and or point of apis
@@ -588,9 +588,7 @@ All abouts angular httpmodule
 5. as a best service we usually make http calls in our services
 6. setup a mock server for our example and app    
 7. import httpclientmodule in application use '@angular/common/http' package
------------------------------------ all abouts httpmodule End
-
-
+----------------------------------- all abouts httpclient End
 
 All abouts angular httpmodule request
 ------------------------------------
@@ -605,7 +603,7 @@ All abouts angular httpmodule request
 3. put method
 
 4. delete methhod
-
+    - to delete data on your endpoint or api
 5. httpclient module
     - http header in the class of httpheader
     - we need to import class httpheaders
@@ -613,20 +611,138 @@ All abouts angular httpmodule request
     - we can pass httpheader with get post put delete request
     - dont pass duplicate headers 
     
-6. params 
+6. httpclient params 
+    - to use httpparams - we need to import the class httpparams
+    - we can pass httpparams with all request
+    - httpparams are immutable we can't modify at the run time
+    - httpparams function
+    - Append,Has,Get,Keys,getAll,Delete,toString
 ----------------------------------- all abouts httpmodule request End
 
+----------------------------------- all abouts interceptors
+1. client(ui) => Request  
+                                    => interceptor =>   <= Response server(api)
+
+2. genrate the interceptor using angular cli                                      
+3. intercepts and handles on httpRequest or httpResponse
+----------------------------------- all abouts interceptors End
+
+
+----------------------------------- all abouts testing
+1. angular support both unit testing and e2e testing
+2. angular has native support jasmine, karma , protarcter framework
+3. we can also use ant other framework of our application choice like mocka etc.
+4. we write our unit tests in jasmine framework
+5. we run our unit testing using karma
+6. for e2e - we use protracter framework
+    - the protarcter is written on top of webdriver
+7. angular cli has built in cmd that can help us to do unit testing as well as e2e testing.
+
+----------------------------------- all abouts testing End
+
+----------------------------------- all abouts testing fundamental concept
+  two types of testing
+1. unit testing
+2. end toend testing
+3. whenever u see file ending with .spec.ts - it mean this is unit testing script
+4. if u see file inside e2e folder
+    - this is folder where u will see all your end to end testing script
+    - e2e-spec.ts
+    - all our e2e test script will/should inside the e2e folder
+    
+5. unit testing
+    - unit testing file can be any folder - in respect folder
+    - the best practice is keep ur unit test file where ur code
+
+6. angular support
+    - jasmine/karma -> unit testing
+    - protracter -> e2e testing
+
+7. we will need to Config for runing our test script
+    - karma config file  under /src/karma.conf.js
+    - protarcter config file  under /e2e/protracter.conf.js
+
+8. we can test any and all aspectsof angular application
+
+9. we can extend our angular application to work and test with other testing framework
+    - mocha
+    - cucumber
+
+10. coverage
+    - all the test  report and code coverage details are captured in this folder
+
+11. under src u will find the file called main.ts
+    - it is starting point of our application
+    - appmodule is the default bootstrapModule
+    - bootstrapModule is not a bootstrap framework
+    - we can configure whic module to start whan application load
+12. test.ts
+    - it is a file for testing the code of main.ts
+
+13. some configration our test config 
+    - angular.json
+----------------------------------- all abouts testing fundamental concept End
+
+----------------------------------- all abouts unit testing
+0. the application will compile first the will execute the unit testing
+1. the cmd we will run to execute our unit testing is ng test
+2. it says karma server started and it gave a port number 9876
+3. all our unit test script in jasmine framework  Behavieral Driven development (BDD)
+4. karma is a test script runner 
+5. it will open new window for a browser
+6. green bullet in report is the test is pass
+7. red buller mean test is fail.
+8. in  the summery line - we can see no of total count or success fail
+9. the configration file for unit testing is -> /src/karma.conf.ts
+10. if we want to config browser we need to import library
+    - the npm install it will install the library    
+----------------------------------- all abouts unit testing End
+
+----------------------------------- all abouts e2e testing
+1. the cmd we will run to execute our e2e testing is ng e2e
+2. all the ene to end test script located at inside the e2e folder
+3. angular use built native support for e2e test using protracter 
+4. we can find the config file in e2e folder
+    - protarcter.conf.js
+    - this is where all the default are mention for e2e
+5. we can customize these option based on our requirement
+6. protarcter is build on top of webdriver
+7. by default protracter usses crome driver
+8. the protarcter will give the execution report no of count success or failed
+9. we can change the browser under the protarcter.conf.ts
+10. we can chage port number by passing in cmd like ng e2e --port=3200
+
+----------------------------------- all abouts e2e testing End
 
 
 
+----------------------------------- all abouts angular building and deployment  testing
+1. Angular build
+    - first compile our application
+        -- checking fro any syntax errors,di matadata wrong
+    - transpiling - typescript code is converted into javascript code es6
+        -- the new js files are given as Output into file directory
+        -- browser only understand js
+    - the main.js fie given to Output directory
+    - the default tooling for build process in angular is webpack
+    - the default build process in the pre define config option
+    - we can build single app or multiple app in same project
+    - whenever we build we use cmd ng build
 
 
+2. angular deployment
+    - once we get Output files these file deploye to the server
+    - we will write cmd in pipeline for deploye application to the server
+    - in most enterprises we will have deployment done on cloud platform
+        -- aws
+        -- azure
+        -- digital ocean
+    - deployment means copying dist folder the hosting website folder
+----------------------------------- all abouts e2e testing End
 
-
-
-
-
-
+----------------------------------- all abouts angular building and deployment  testing
+1. 
+----------------------------------- all abouts e2e testing End
 
 
 
@@ -662,5 +778,5 @@ All abouts angular httpmodule request
 
 
 
-
+-
 
