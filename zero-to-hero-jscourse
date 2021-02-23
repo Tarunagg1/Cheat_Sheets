@@ -35,8 +35,6 @@
 
 // // **********************************************************************
 
-// // 👉 // 🤩 SUBSCRIBE TO Tarun Aggarwal YOUTUBE CHANNEL 🤩
-//  👉 // 🤩  https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA
 
 // // **********************************************************************
 
@@ -292,8 +290,7 @@
 
 // // **********************************************************************
 
-// // 👉 // 🤩 SUBSCRIBE TO Tarun Aggarwal YOUTUBE CHANNEL 🤩
-//  👉 // 🤩  https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA
+
 
 // // **********************************************************************
 
@@ -634,8 +631,7 @@
 
 // // **********************************************************************
 
-// // 👉 // 🤩 SUBSCRIBE TO Tarun Aggarwal YOUTUBE CHANNEL 🤩
-//  👉 // 🤩  https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA
+
 
 // // **********************************************************************
 
@@ -1121,8 +1117,7 @@
 
 // // **********************************************************************
 
-// // 👉 // 🤩 SUBSCRIBE TO Tarun Aggarwal YOUTUBE CHANNEL 🤩
-//  👉 // 🤩  https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA
+
 
 // // **********************************************************************
 
@@ -1400,8 +1395,7 @@
 
 // // **********************************************************************
 
-// // 👉 // 🤩 SUBSCRIBE TO Tarun Aggarwal YOUTUBE CHANNEL 🤩
-//  👉 // 🤩  https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA
+
 
 // // **********************************************************************
 
@@ -2120,8 +2114,6 @@
 
 // // **********************************************************************
 
-// // 👉 // 🤩 SUBSCRIBE TO Tarun Aggarwal YOUTUBE CHANNEL 🤩
-//  👉 // 🤩  https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA
 
 // // **********************************************************************
 
@@ -2196,7 +2188,7 @@
 
 // alert(location.href); // shows current URL
 // if (confirm("Want to Visit TarunAggarwal?")) {
-//   location.href = "https://www.youtube.com/TarunAggarwal"; // redirect the browser to another URL
+//   location.href = "https://www.google.com"; // redirect the browser to another URL
 // }
 
 
@@ -2719,14 +2711,6 @@
 // const sum = (num1) => (num2) => (num3) => console.log(num1+num2+num3); 
 
 // sum(5)(3)(8);
-
-// // **********************************************************************
-
-// // 👉 // 🤩 SUBSCRIBE TO Tarun Aggarwal YOUTUBE CHANNEL 🤩
-//  👉 // 🤩  https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA
-
-// // **********************************************************************
-
 
 
 // // 8️⃣: CallBack Hell 
