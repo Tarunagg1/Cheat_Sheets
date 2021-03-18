@@ -33,6 +33,8 @@ git branch feature  // to create new branch
 git branch ///to show all branches
 git checkout master // to move one branch to another
 git marge fileename to master //to mearge 2 branch
+git remote rm <remote-name>
+
 
 
 <!-- to deploye to github web -->
