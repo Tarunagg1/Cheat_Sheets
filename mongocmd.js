@@ -2,9 +2,9 @@
 show dbs;
 use dbname;
 show collections;
-db.createCollection("col-name")  ///////// create collection
+db.createCollection("collection-name")  ///////// create collection
 db.collectionname.drop();    ////////////// drop collection
-
+db   // for view db
 /////////////////////////////////  insert data
 db.collections-name.find();
 db.collections-name.insertOne({name:"nokia",price:1500,rating:4.6,qty:50,sold:50})
@@ -66,17 +66,18 @@ db.collectionname.find().count() ////////////////////////// count collection
 
 ////////////////////////////////////////////////////////////////////////////////////// dorp database
 use dbname               ///////////// move inside db
-db.dropDatabser()        ////////////////// drop database
+db.dropDatabse()        ////////////////// drop database
+
+db.practice.update({name:'arun'},{
+    $inc:{                                   //////////// increment operator
+        member:2
+    }
+})
+
 
 ////////////////////////////////////////////////////////////////////////////////////// data backup and restore
 mongodump ////////////////////////////////////////////////////////////// it is use to take backup
 mongorestore ////////////////////////////////////////// to restore all database
-
-
-
-
-
-
 
 
 
