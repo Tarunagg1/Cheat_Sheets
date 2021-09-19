@@ -1,0 +1,96 @@
+Docker clienr -> is a tool we issue commands to for reaching out docker demon
+
+Docker demon -> is a service that run on ur host os. it is responsible for running container
+
+
+Image -> It is a single file with all dependencies and configration.
+
+Container -> it contain isolated set of hardware reposes run's on our computer and use machine resources.
+
+
+
+namespacing -> we'll do islation of resources by process in this.
+
+controll group -> limit the resources usege.
+
+
+COMMANDS
+docker run == docker create + docker run; ->
+
+docker run anyappname  -> to run docker
+
+docker run anyappname ls -> to show file structure snapshot
+
+docker ps -> to show all running container and it's meta data meta data of container like name,img,ports
+
+docker ps --all -> to show all containers and and also which are stoped in past
+
+docker stop id -> stop container waya container id
+docker kill id -> stop container waya container id forcefully
+
+
+docker logs id -> to view all logs what container doing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

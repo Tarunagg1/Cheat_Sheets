@@ -1,8 +1,10 @@
 /////////////////////////////////////////////////////////////////////////////// aws
 ec2-13-233-255-101.ap-south-1.compute.amazonaws.com   <- backend 
 ec2-65-1-92-79.ap-south-1.compute.amazonaws.com    <- frontend
+ec2-3-134-90-88.us-east-2.compute.amazonaws.com  -> free
 
-
+#@nm0l1998
+LinkedInsaikat@gmail.com  -> Femfly@1234
 
 1. sudo nano /etc/nginx/sites-available/default
 3. sudo systemctl reload nginx
@@ -12,9 +14,9 @@ ec2-65-1-92-79.ap-south-1.compute.amazonaws.com    <- frontend
 
 server {
     listen 80;
-    server_name dashback.in backend.main.dashback.in;
+    server_name uniquemotor.in www.uniquemotor.in;
     location / {
-        proxy_pass http://127.0.0.1:1234;
+        proxy_pass http://127.0.0.1:8867;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -26,11 +28,11 @@ server {
 
 
 /// sub domain
+
 server {
-    listen 80;
-    server_name dashback.in backend.main.dashback.in;
+    server_name hardcipher.io admin.hardcipher.io;
     location / {
-        proxy_pass http://127.0.0.1:1234;
+        proxy_pass http://127.0.0.1:6543;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -58,9 +60,20 @@ pm2 start node_modules/react-scripts/scripts/start.js --name "my-app" -- --produ
 
 
 ////////////// add https domain
-sudo certbot --nginx -d hashtagplanners.in -d webinar.hashtagplanners.in
+sudo certbot --nginx -d bhukhaad.in-d www.bhukhaad.in
 
 // subdomain
-sudo certbot --nginx -d dashback.in -d webinar.dashback.in     
+sudo certbot --nginx -d admin.hardcipher.io -d www.hardcipher.io   
 
 SELECT 2 in http
+
+
+//// create ec2 instance
+sudo apt-get update
+
+
+
+
+
+
+
