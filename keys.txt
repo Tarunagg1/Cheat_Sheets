@@ -2,7 +2,7 @@
 
 ec2-3-134-90-88.us-east-2.compute.amazonaws.com  -> free
 
-#@nm0l1998
+
 LinkedInsaikat@gmail.com  -> Femfly@1234
 
 1. sudo nano /etc/nginx/sites-available/default
@@ -13,7 +13,7 @@ LinkedInsaikat@gmail.com  -> Femfly@1234
 
 server {
     listen 80;
-    server_name uniquemotor.in www.uniquemotor.in;
+    server_name uniquemr.in www.unir.in;
     location / {
         proxy_pass http://127.0.0.1:8867;
         proxy_http_version 1.1;
@@ -29,7 +29,7 @@ server {
 /// sub domain
 
 server {
-    server_name hardcipher.io admin.hardcipher.io;
+    server_name harr.io admin.ha.io;
     location / {
         proxy_pass http://127.0.0.1:6543;
         proxy_http_version 1.1;
