@@ -16,16 +16,25 @@ controll group -> limit the resources usege.
 
 COMMANDS
 docker run == docker create + docker run; ->
+docker images -> to see all install images
 
 docker run anyappname  -> to run docker
 
 docker run anyappname ls -> to show file structure snapshot
 
-docker ps -> to show all running container and it's meta data meta data of container like name,img,ports
+docker ps -> it give us all active running container and it's meta data meta data of container like name,img,ports
+
+docker ps -a -> it give us all active runnning and exited container
+
+
 
 docker ps --all -> to show all containers and and also which are stoped in past
 
 docker stop id -> stop container waya container id
+docker pull imagename ->  to pull img form registery
+docker build -> build img from docker files
+docker push -> push yoour img to repositry to registery
+docker commit -> create a new image from a container Changes
 docker kill id -> stop container waya container id forcefully
 
 
@@ -33,7 +42,8 @@ docker logs id -> to view all logs what container doing.
 
 
 
-
+docker rm :id --> for remove container
+docker rm -f :id --> for remove container forcefully
 
 
 

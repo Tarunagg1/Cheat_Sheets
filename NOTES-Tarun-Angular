@@ -1,7 +1,24 @@
+# most important file
+    1. package.json
+    2. node_modules
+    3. src - we write code
+        -- app
+        -- assets
+        -- environments
+        -- main.ts
+        -- style.css
+
+# advance file good if know
+    1. package.lock.json
+    
+
+
+
+
+
 -------------------------------------------------directories structure start
 e2e[
     end to end text script
-
 ]
 
 node modle [
@@ -489,6 +506,7 @@ All abouts angular Form template Driven form
 5. we need to import FormsModule from '@angular/forms'
 
 ---------------------------------- form tage in angular for validation
+import {FormsModule} from '@angular/forms';  // import it in mudule file
 6. #singform="ngForm" // for form name
 7. ngModel // in input 
 8. [disabled]="!formname.valid" 
