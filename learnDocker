@@ -1,4 +1,4 @@
-Docker clienr -> is a tool we issue commands to for reaching out docker demon
+Docker client -> is a tool we issue commands to for reaching out docker demon
 
 Docker demon -> is a service that run on ur host os. it is responsible for running container
 
@@ -17,6 +17,7 @@ controll group -> limit the resources usege.
 COMMANDS
 docker run == docker create + docker run; ->
 docker images -> to see all install images
+docker rmi imgid -> delete the image
 
 docker run anyappname  -> to run docker
 
@@ -31,6 +32,7 @@ docker ps -a -> it give us all active runnning and exited container
 docker ps --all -> to show all containers and and also which are stoped in past
 
 docker stop id -> stop container waya container id
+docker statrt id -> restartthe stop container
 docker pull imagename ->  to pull img form registery
 docker build -> build img from docker files
 docker push -> push yoour img to repositry to registery
@@ -45,14 +47,23 @@ docker logs id -> to view all logs what container doing.
 docker rm :id --> for remove container
 docker rm -f :id --> for remove container forcefully
 
+docker exec -it container_id   -> it will move you inside
+for get out from container write exit
+
+# ************************************ NETWORK ********************************
+docker network create mongo-express
+docker network ls
+
+# ************************************ NODE RUN IN DOCKER CONTAINER ********************************
+docker pull mongo
+docker pull mongo-express
+docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network mongo -> run docker client run
+docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password --net mongo-network --name mongo-express -e ME_CONFIG_MONGODB_SERVER=mongodbb mongo-express
 
 
 
 
-
-
-
-
+################################################################ KUBERNETES ################################################################################
 
 
 
