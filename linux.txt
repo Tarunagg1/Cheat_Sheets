@@ -1,0 +1,127 @@
+cat > tarun  -- Create and write in files
+ls -l  -- to get information about file and modes
+file [filename]  -- to get type of file
+wc tarun - it will tell the file size
+ls -l / -- to list all file with there permissions
+ps -- to view all background services
+top -- to check foreground services
+rmdir --- toremove directory
+rm [filename] -- remove the filename
+
+
+############# permissions Linux ubuntu ################### 
+
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jan  2 10:59 arun  -- example directory
+-rw-rw-r-- 1 ubuntu ubuntu   64 Jan  2 10:44 tarun  -- example file
+
+chmod [ditname as dr/user permission as wxr/other user  ] [filrname]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
