@@ -1,0 +1,99 @@
+/////////////////////////////////////////////////////////////////////////////// aws
+
+ec2-3-134-90-88.us-east-2.compute.amazonaws.com  -> free
+
+
+LinkedInsaikat@gmail.com  -> Femfly@1234
+
+1. sudo nano /etc/nginx/sites-available/default
+3. sudo systemctl reload nginx
+
+
+// domain
+
+server {
+    listen 80;
+    server_name uniquemr.in www.unir.in;
+    location / {
+        proxy_pass http://127.0.0.1:8867;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_redirect off;
+     }
+}
+
+
+/// sub domain
+
+server {
+    server_name harr.io admin.ha.io;
+    location / {
+        proxy_pass http://127.0.0.1:6543;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_redirect off;
+     }
+}
+
+
+
+
+//////////////// pm2 
+pm2 list
+pm2 delete <pid>
+pm2 start filename -- --production
+
+pm2 serve <path> <port> --spa
+
+
+
+//////////// react app on server pm2
+pm2 start node_modules/react-scripts/scripts/start.js --name "my-app" -- --production
+
+
+
+////////////// add https domain
+sudo certbot --nginx -d bhukhaad.in-d www.bhukhaad.in
+
+// subdomain
+sudo certbot --nginx -d admin.hardcipher.io -d www.hardcipher.io   
+
+SELECT 2 in http
+
+
+//// create ec2 instance
+sudo apt-get update
+
+
+///////////////////////////////////// load balancer nginx
+
+location
+nano /usr/local/etc/nginx/nginx.conf
+
+http {
+    upstream backend {
+        server http://serverip:port;
+        server http://serverip:port;
+        server http://serverip:port;
+    }
+
+    server {
+        listen 80;
+        root /filepaths ;
+        location / {
+            proxy_pass backend;
+        }
+    }
+}
+
+event {}
+
+
+
+
