@@ -1,5 +1,10 @@
+uname -- it will give kernal name
+uptime -- give how long machine running
+whoami -- show who is login and credential and groups
 cat > tarun  -- Create and write in files
 ls -l  -- to get information about file and modes
+ll  -- to get information about file and modes
+ls -a -- show hidden file start with (DOT)
 file [filename]  -- to get type of file
 wc tarun - it will tell the file size
 ls -l / -- to list all file with there permissions
@@ -7,6 +12,7 @@ ps -- to view all background services
 top -- to check foreground services
 rmdir --- toremove directory
 rm [filename] -- remove the filename
+rm -r [dirname] -- remove folder which containe multiple other files
 
 
 ############# permissions Linux ubuntu ################### 

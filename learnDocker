@@ -55,11 +55,18 @@ docker network create mongo-express
 docker network ls
 
 # ************************************ NODE RUN IN DOCKER CONTAINER ********************************
+docker run -it -d --name rabbitmq -p 4001:4001 rabbitmq  -- start process
+docker run -it -d --name rediss -p 4002:4002 redis   -- execute process
+
 docker pull mongo
 docker pull mongo-express
 docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network mongo -> run docker client run
 docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password --net mongo-network --name mongo-express -e ME_CONFIG_MONGODB_SERVER=mongodbb mongo-express
 
+
+# ************************************ PUSH IMAGE ON DOCKER HUB ********************************
+docker login
+docker tag custom-python-image arunaggarwal096/custom-python-image
 
 
 
