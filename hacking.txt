@@ -1,5 +1,65 @@
 1. wireshark  -- to capture the packets from the network
 
 
+2. -- setting proxy complete anonymous vpn & mac addresse
+
+# change hosts name 
+/etc/hosts
+/etc/hostname
+
+# Apply proxy by go to 
+. /etc/proxychains.conf
+. uncomment dynamic chain
+. comment static chain
+. write ips in bottom below format https ip port 
+
+
+# start vpn
+    . got to /etc/ghcp
+    . gedit dhclient.conf
+    . un comment prepend on lineno 25
+
+# mac address changer
+    . macchanger -help -- to see manual
+    . macchanger -s eth0 -- to show my current network mac
+
+
+3. footprint
+  # using search engine
+    . not evil
+    . shodan
+    . censys
+    . duck duck go
+    . google 
+
+  # advance google hacking
+    . cache
+    .allintext
+    .filetype
+    .inurl
+    .intitle
+    .intext
+    .IndexOf
+  
+  # footprinting social networking sites
+
+  # footprinting website sites
+    . knowing website tech - netcraft | wapplyer
+    . subdomain list - sublist3r | subdomainfinder
+    . finding hidden links - extractor | dirB
+    . check security of headers - securityheader.com
+    . ip buffer size
+    . ssl test - ssllabs.com | ssltest
+    . checking SPF Record and more
+  
+  # footprinting email
+    . emailtrackerpro
+
+4. Network scaning
+  # Nmap
+  
+
+
+    
 
 
