@@ -1,0 +1,107 @@
+GET /~
+
+GET _cat/indices?v=true
+
+GET _cat/indices?help
+
+GET /_cat/indices?v
+
+GET /kibana_sample_data_ecommerce/_search
+
+
+POST tarun/_doc/2
+{
+  "title":2,
+  "name":"update"
+}
+
+
+GET _cat/indices
+
+
+GET tarun/_search
+
+
+PUT school
+
+POST school/_mapping
+{
+  "properties":{
+    "student_name":{
+      "type":"text"
+    },
+    "addmission_no":{
+      "type":"long"
+    },
+    "fees":{
+      "type":"double"
+    },
+    "batch":{
+      "type":"keyword"
+    },
+    "subject":{
+      "type":"object",
+      "properties":{
+        "id":{
+          "type":"text"
+        }
+      }
+    }
+  }
+}
+
+
+GET school/_mapping
+
+POST school/_doc
+{
+  "fees":200,
+  "student_name":"update",
+  "addmission_no":77,
+  "batch":["2021","2022"],
+  "subject":{
+    "id":518
+  }
+}
+
+
+
+GET school/_search?q=7
+
+
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "match": {
+      "products.product_id": "11262"
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
