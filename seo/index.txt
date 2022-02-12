@@ -1,0 +1,37 @@
+############################### ON page seo #########################
+
+## On page seo factors
+{
+    title tag{
+        length 50-60 char
+        unique title
+    }
+    description{
+        length 130 - 160
+        
+        
+    }
+    h1{
+        length 20 - 70
+        
+    }
+    formated text
+    outgoing text
+    url -- domain subdomain folder name or page name
+    alt tag
+    content
+}
+
+ 
+
+## tools{
+    Google search engine
+    Google analytics manager 
+    Google tag manager (GTM)
+    https://www.portent.com/serp-preview-tool/  -- preview the title and description in real hoow it's look like
+    https://search.google.com/test/mobile-friendly   -- check our website is mmobile friendly or  not
+}
+
+
+
+
