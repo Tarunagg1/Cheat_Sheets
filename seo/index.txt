@@ -8,12 +8,9 @@
     }
     description{
         length 130 - 160
-        
-        
     }
     h1{
         length 20 - 70
-        
     }
     formated text
     outgoing text
@@ -22,6 +19,28 @@
     content
 }
 
+2. Site map
+3. robots.txt
+
+4. What is da (Domain authority)
+
+5. ssl certificate types{
+    - single domain ssl certificate
+    - mullti domain ssl certificate
+    - wildcard domain ssl certificate
+    - organization domain ssl certificate
+    - extended domain ssl certificate
+}
+
+6. Searcher intent{
+    - imformational
+    - navigational
+    - transactional
+    - commercial
+    - local searches
+}
+
+7. 
  
 
 ## tools{
@@ -30,6 +49,8 @@
     Google tag manager (GTM)
     https://www.portent.com/serp-preview-tool/  -- preview the title and description in real hoow it's look like
     https://search.google.com/test/mobile-friendly   -- check our website is mmobile friendly or  not
+    seoquack - it's chrome extension
+    
 }
 
 
