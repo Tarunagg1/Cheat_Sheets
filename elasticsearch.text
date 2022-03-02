@@ -81,6 +81,21 @@ GET kibana_sample_data_ecommerce/_search
 
 
 
+GET school/_search
+{
+  "sort": [
+    {
+      "fees": {
+        "order": "desc"
+      }
+    }
+  ]
+}
+
+
+
+
+
 
 
 
