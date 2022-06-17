@@ -48,11 +48,14 @@ spec:
 -------------------------------------------------------- important commands -------------------------------------------------------
 
 kubectl create -f filename.yml
-kubectl get pods
-kubectl get nodes
+kubectl get pods  ---get all pods
+kubectl get nodes  -- get  node
 kubectl delete pod Nginx
+kubectl get replicaset
+kubectl edit deployment name-of-deployment
+
 
 
 
 kubectl create  server-d.yml
-kubectl delete  server-d.yml  
+kubectl delete  server-d.yml
