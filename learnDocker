@@ -54,7 +54,7 @@ for get out from container write exit
 
 # ************************************ NETWORK ********************************
 docker network create mongo-express
-docker network ls
+docker network ls -- view all network container
 
 # ************************************ NODE RUN IN DOCKER CONTAINER ********************************
 docker run -it -d --name rabbitmq -p 4001:4001 rabbitmq  -- start process
@@ -74,6 +74,7 @@ docker push arunaggarwal096/my-node-app:tagname
 
 ######################################################### multi docker image compose
 docker-compose up -- too build and start multiple images
+docker-compose -f fileName up -- too build docker from file
 docker-compose ps  -- to view all containers
 docker-compose down -- use to stop and remove the container
 
