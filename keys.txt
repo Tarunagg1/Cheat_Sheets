@@ -1,3 +1,21 @@
+/// key points for production ready server
+OS (ubuntu OR  centos)
+Nodejs from git
+Auto restart PM2
+Nginx reverse proxy
+Load balancer (not required current stage)
+Compressed responses
+Firewell
+OS automatic Updates
+NTP Root access
+SSL certificate
+SSl Auto renewal
+Github Webhooks
+Automatic Deployments
+Fail2ban
+AWS (Micro sufficient will upgrade further)
+
+
 /////////////////////////////////////////////////////////////////////////////// aws
 
 ec2-3-134-90-88.us-east-2.compute.amazonaws.com  -> free
@@ -7,6 +25,72 @@ LinkedInsaikat@gmail.com  -> Femfly@1234
 
 1. sudo nano /etc/nginx/sites-available/default
 3. sudo systemctl reload nginx
+4. For firewall we use Firewalld -- https://computingforgeeks.com/install-and-use-firewalld-on-ubuntu/
+
+// firewall comands
+{
+    sudo firewall-cmd --list-services
+    sudo firewall-cmd --add-service https --zone public --permanent   // add new service in firewall
+    sudo firewall-cmd --reload  // reload firewall when add new services
+    sudo firewall-cmd --add-port=4000/tcp --zone=public   // to add new port
+    sudo firewall-cmd --remove-port=4000/tcp --zone=public   // to remove port
+
+    sudo firewall-cmd --list-ports  // to see alll open ports
+    sudo systemctl reload firewalld  // reload service if in case --reload not works
+}
+
+// load balancer with n numbers
+upstream someName{
+    ip_hash;
+    serve localhost:4000;
+    serve localhost:4001;
+}
+
+// newest way
+server {
+    listen 80;
+    server_name uniquemr.in www.unir.in;
+
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 256;
+    gzip_proxied any;
+    gzip_buffers 16 8k;
+    gzip_comp_level 6;
+    gzip_http_version 1.1;
+
+    gzip_disable "msie6";
+
+    gzip_types text/plain application/javascript text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascr>
+    proxy_set_header Host $http_host;
+    proxy_set_header X-Real-Ip $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+    location / {
+        proxy_pass http://someName;
+     }
+}
+
+// for socket io and normal application both
+server {
+    listen 80;
+    server_name uniquemr.in www.unir.in;
+    proxy_set_header Host $http_host;
+    proxy_set_header X_Real_Ip $remote_addr;
+    proxy_set_header X-Forward-For $Proxy_add_x_forward_for;
+
+    location / {
+        proxy_pass http://someName;
+    }
+
+    location /socket.io {
+        proxy_pass http://someName/socket.io;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+     }
+}
+
 
 
 // domain
@@ -14,6 +98,7 @@ LinkedInsaikat@gmail.com  -> Femfly@1234
 server {
     listen 80;
     server_name uniquemr.in www.unir.in;
+    
     location / {
         proxy_pass http://127.0.0.1:8867;
         proxy_http_version 1.1;
